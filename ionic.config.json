@@ -1,0 +1,7 @@
+{
+  "name": "Elude_Fertile_Admin",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
