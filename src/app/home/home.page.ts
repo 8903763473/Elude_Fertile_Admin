@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public app: AppComponent) { }
 
+  ionViewWillEnter() {
+    this.app.leftSide = true
+    this.app.topHeader = true
+    this.app.anotherLeftMenu = true    
+    this.app.leftSelectedMenu = 1
+  }
 }

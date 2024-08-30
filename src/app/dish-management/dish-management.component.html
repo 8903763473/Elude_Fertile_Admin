@@ -1,0 +1,113 @@
+<section class="overflow">
+  <div class="container">
+    <div class="header">
+      <h2 class="color-black">Item Details</h2>
+      <div class="search-box bg-white">
+        <input type="text" placeholder="Search by item name" class="bg-white" />
+        <button><i class="bi bi-search color-black"></i></button>
+      </div>
+    </div>
+  
+    <form class="item-details-form">
+      <div class="inputSection d-flex align-items-center justify-content-center flex-direction-column">
+        <div class="form-group width-100 mt-10">
+          <label>Item Name:</label>
+          <input type="text" value="Bhel Poori" class="bg-white"/>
+        </div>
+    
+        <div class="form-group width-100 mt-10">
+          <label>Category:</label>
+          <select class="bg-white">
+            <option>Chaat + Snacks</option>
+          </select>
+        </div>
+    
+        <div class="form-group width-100 mt-10">
+          <label>Kitchen Section:</label>
+          <select class="bg-white">
+            <option>Kitchen1</option>
+          </select>
+        </div>
+    
+        <div class="form-group width-100 mt-10">
+          <label>Barcode:</label>
+          <input type="text" value="100005" class="bg-white"/>
+        </div>
+    
+      </div>
+
+
+      <div class="inputSection d-flex align-items-center justify-content-center flex-direction-column">
+        <div class="form-group width-100 mt-10">
+          <label>Rate:</label>
+          <input type="text" value="100.00"class="bg-white text-align-right" />
+        </div>
+    
+        <div class="form-group width-100 mt-10">
+          <label>Swiggy Rate:</label>
+          <input type="text" value="100.00"class="bg-white text-align-right" />
+        </div>
+    
+        <div class="form-group width-100 mt-10">
+          <label>Take Away Rate:</label>
+          <input type="text" value="100.00"class="bg-white text-align-right" />
+        </div>
+      </div>
+
+  
+      <div class="form-group">
+        <label class="uploadText">Dish Image Upload</label>
+        <div class="image-upload d-flex align-items-center justify-content-center pointer">
+          <button><i class="bi bi-camera color-black"></i></button>
+        </div>
+      </div>
+  
+      <div class="form-actions d-flex align-items-center justify-content-center flex-direction-column gap-20">
+        <div class="width-100 d-flex align-items-center justify-content-center gap-20">
+          <button class="new-btn"><img src="../../assets/Dish/new.svg" alt=""> New</button>
+        <button class="save-btn bg-white border-lightgrey"><img src="../../assets/Dish/save.svg" alt="">Save</button>
+        </div>
+        <div class="width-100 d-flex align-items-center justify-content-center gap-20">
+          <button class="update-btn bg-white border-lightgrey"><img src="../../assets/Dish/update.svg" alt="">Update</button>
+        <button class="delete-btn bg-white border-lightgrey"><img src="../../assets/Dish/delete.svg" alt="">Delete</button>
+        </div>
+      </div>
+    </form>
+  
+    <table class="items-table">
+      <thead>
+        <tr>
+          <th>Menu Item</th>
+          <th>Category</th>
+          <th>Kitchen/Section</th>
+          <th>Rate</th>
+          <th>Home Delivery Rate</th>
+          <th>Take Away Rate</th>
+          <th>Swiggy Rate</th>
+          <th>Zomato Rate</th>
+          <th>Uber Eats Rate</th>
+          <th>Express Rate</th>
+          <th>Status</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of dummy">
+          <td>Bhel Puri</td>
+          <td>Chaat + Snacks</td>
+          <td>Kitchen 1</td>
+          <td>100.00</td>
+          <td>100.00</td>
+          <td>100.00</td>
+          <td>100.00</td>
+          <td>100.00</td>
+          <td>100.00</td>
+          <td>100.00</td>
+          <td>Active</td>
+          <td><span class="image-placeholder"></span></td>
+        </tr>
+        <!-- Repeat for more rows -->
+      </tbody>
+    </table>
+  </div>
+</section>

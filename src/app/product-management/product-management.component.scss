@@ -1,0 +1,202 @@
+section {
+    width: calc(100% - 225px);
+    margin-left: 215px;
+
+    .menu_items {
+        margin-top: 50px;
+
+        .menu_icons {
+
+            button {
+                display: none;
+            }
+        }
+
+        .menuCategory {
+            // overflow-x: scroll !important;
+
+            .addMenu {
+                background: #FADDD8 !important;
+                border: 1px solid #3A3A3A !important;
+            }
+
+            .menuCategory-In {
+                height: 85% !important;
+                width: 100px !important;
+                min-width: 100px;
+
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .aboutCategory {
+                    height: 40px !important;
+
+                    span {
+                        font-family: Inter;
+                        font-size: 9.2px;
+                        font-weight: 600;
+                        line-height: 11.13px;
+                        text-align: center;
+                        color: black;
+                    }
+
+                    p {
+                        font-family: Inter;
+                        font-size: 7px;
+                        font-weight: 600;
+                        line-height: 6.66px;
+                        text-align: left;
+                        color: #878787;
+                    }
+                }
+            }
+        }
+
+        .foodTitle {
+            h4 {
+                font-family: Inter;
+                font-size: 18.5px;
+                font-weight: 600;
+                line-height: 22.39px;
+                text-align: left;
+            }
+
+            .searchSection {
+
+                .searchSection-In {
+                    width: 200px;
+                    height: 30px;
+                    background: #FDECEC;
+                    padding: 0 10px;
+                    border-radius: 4px;
+
+                    ion-input {
+                        width: 100%;
+                        height: 30px;
+                        max-height: 30px;
+                        min-height: 30px;
+                        font-family: Quicksand;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 18.75px;
+                        text-align: left;
+                        color: #535353;
+                        position: relative;
+
+                        i {
+                            position: absolute;
+                            right: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .AllMenus {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            .menuFood {
+                .addNewDish {
+                    min-height: 145px;
+                    background: #FADDD8 !important;
+                    border: 1px solid #3A3A3A !important;
+
+                    span {
+                        font-family: Inter;
+                        font-size: 12.2px;
+                        font-weight: 600;
+                        line-height: 14.76px;
+                        text-align: center;
+                    }
+                }
+
+                .menuFood-In {
+                    width: 115px !important;
+                    min-width: 115px !important;
+                    gap: 18px;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    .aboutCategory {
+                        height: auto;
+
+                        span {
+                            font-family: Inter;
+                            font-size: 8.5px;
+                            font-weight: 400;
+                            line-height: 10.29px;
+                            text-align: center;
+                            color: #808683;
+                        }
+
+                        .AddFood {
+                            width: 90%;
+                            border-radius: 20px;
+                            padding: 3px;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            background-color: #F15350;
+                            gap: 13px;
+
+                            i {
+                                color: #F9A9A8;
+                            }
+
+                            span {
+                                font-family: Inter;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 14.76px;
+                                text-align: left;
+                                color: white;
+                            }
+
+                            .editDish {
+                                width: 20px !important;
+                                height: 20px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+}
+
+
+// *********************************************ADDITIONAL STYLES********************************
+
+.width-20px {
+    width: 20px !important;
+}
+
+.height-20px {
+    height: 20px !important;
+}
+
+
+@media screen and (max-width:600px) {
+    .menuCategory-In {
+        width: 80px !important;
+        min-width: 80px !important;
+    }
+}
