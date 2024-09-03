@@ -1,0 +1,71 @@
+<section class="Fullpage overflow">
+  <div class="container">
+    <div class="header">
+      <h2 class="color-black">Order History</h2>
+      <div class="search-box bg-white">
+        <ion-input type="text" placeholder="From Date" class="bg-white color-black" value="{{selectedDate | date:'dd-mm-yyyy'}}" readonly>
+          <i class="bi bi-calendar3" (click)="isDatePicker=true"></i>
+        </ion-input> 
+        <ion-input type="text" placeholder="To Date" class="bg-white color-black" value="{{selectedDate | date:'dd-mm-yyyy'}}" readonly>
+          <i class="bi bi-calendar3" (click)="isDatePicker=true"></i>
+        </ion-input> 
+        <button class="bg-orange border-none radius-3 pointer"><i class="bi bi-search color-white"></i></button>
+      </div>
+    </div>
+    
+    <table class="items-table">
+      <thead>
+        <tr>
+          <th>Bill No</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Discount %</th>
+          <th>Member Id</th>
+          <th>Loyalty Points</th>
+          <th>Loyalty Amount</th>
+          <th>Sub Total</th>
+          <th>Parcel Charges</th>
+          <th>Grand Total</th>
+          <th>Cash</th>
+          <th>Change</th>
+          <th>Payment Mode</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of TableData">
+          <td>{{ item.billNo }}</td>
+          <td>{{ item.date }}</td>
+          <td>{{ item.time }}</td>
+          <td>{{ item.discount }}</td>
+          <td>{{ item.memberId }}</td>
+          <td>{{ item.loyaltyPoints }}</td>
+          <td>{{ item.loyaltyAmount }}</td>
+          <td>{{ item.subTotal }}</td>
+          <td>{{ item.parcelCharges }}</td>
+          <td>{{ item.grandTotal }}</td>
+          <td>{{ item.cash }}</td>
+          <td>{{ item.change }}</td>
+          <td>{{ item.paymentMode }}</td>
+          <td>
+            <span [ngClass]="{ 'status-paid': item.status === 'Paid', 'status-unpaid': item.status === 'Un Paid' }">
+              {{ item.status }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ******************************************************POPUP***************************************** -->
+
+
+  <div id="datePickPopup" class="DatePick height-100 position-fixed z-index-10 top-0 left-0 d-flex align-items-center justify-content-center bg-overlay" *ngIf="isDatePicker">
+    <div class="width-100 height-100 position-fixed z-index-minus-1" (click)="isDatePicker=false"></div>
+    <div>
+        <ion-datetime id="datePicker" (ionChange)="onDateSelected($event)" placeholder="Select Date"></ion-datetime>
+    </div>
+</div>  
+
+
+</section>

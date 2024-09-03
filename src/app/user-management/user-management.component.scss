@@ -62,7 +62,7 @@ section {
                     font-family: Inter;
                     font-size: 11px;
                     font-weight: 400;
-                    line-height: 21.78px;
+                    line-height: 18px;
                     text-align: left;
                 }
 
@@ -124,8 +124,9 @@ section {
             .form-actions {
 
                 button {
-                    min-width: 100px;
-                    padding: 10px 15px;
+                    min-width: 65px;
+                    padding: 4px;
+                    font-size: 11px;
                     border: none;
                     border-radius: 4px;
                     cursor: pointer;
@@ -136,7 +137,7 @@ section {
                     color: black;
 
                     img {
-                        width: 20px !important;
+                        width: 13px !important;
                     }
 
                     &.new-btn {
@@ -201,10 +202,24 @@ section {
 
 
 
+// ***************************************MEDIA CODE************************************
+
+@media screen and (max-width:650px) {
+    .item-details-form {
+        grid-template-columns: repeat(1, 100%) !important;
+        gap: 0 !important;
+    }
+
+    .DatePick {
+        width: calc(100% - 0px) !important;
+        margin-top: 50px !important;
+        margin-left: 0 !important;
+    }
+}
 
 
 
-// ****************************************ADDITIONAL STYLE********************************
+// ****************************************ADDITIONAL STYLE*****************************
 
 ion-input:focus {
     border-color: #e2725b !important;

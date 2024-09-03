@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 
 @Component({
@@ -11,6 +12,7 @@ export class AppComponent {
   leftSide: boolean = false;
   topHeader: boolean = false;
   anotherLeftMenu: boolean = false;
+  isOpenedAnotherMenu: boolean = false;
   leftSelectedMenu: any = 0
 
   menuItems = [
@@ -23,7 +25,7 @@ export class AppComponent {
     { id: 7, src: '../assets/menu/Logout.svg', alt: 'Logout' }
   ];
 
-  constructor(public menu: MenuController) { }
+  constructor(public menu: MenuController, public router: Router) { }
 
   ngAfterViewInit() {
     this.leftSelectedMenu = 1
@@ -37,8 +39,14 @@ export class AppComponent {
     console.log('Clicked Menu');
   }
 
-  selectLeftMenu(id: any) {
+  selectLeftMenu(data: any, id: any) {
     this.leftSelectedMenu = id;
+    this.router.navigate(['/admin/' + data])
+  }
+
+  OpenAnotherLeftMenu() {
+    this.isOpenedAnotherMenu = !this.isOpenedAnotherMenu;
+    this.menu.close();
   }
 
 }

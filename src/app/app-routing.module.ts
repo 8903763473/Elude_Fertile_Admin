@@ -4,6 +4,10 @@ import { ProductManagementComponent } from './product-management/product-managem
 import { DishManagementComponent } from './dish-management/dish-management.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { TableManagementComponent } from './table-management/table-management.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { SpecialNotesManagementComponent } from './special-notes-management/special-notes-management.component';
+import { LoginComponent } from './login/login.component';
+import { OTPComponent } from './otp/otp.component';
 
 const routes: Routes = [
   {
@@ -14,6 +18,14 @@ const routes: Routes = [
     path: '',
     redirectTo: 'admin/home',
     pathMatch: 'full'
+  },
+  {
+    path: 'admin/login',
+    component: LoginComponent
+  },
+  {
+    path: 'admin/otp',
+    component: OTPComponent
   },
   {
     path: 'admin/ProductManagement',
@@ -30,6 +42,14 @@ const routes: Routes = [
   {
     path: 'admin/tableManagement',
     component: TableManagementComponent
+  },
+  {
+    path: 'admin/OrderHisitory',
+    component: OrderHistoryComponent
+  },
+  {
+    path: 'admin/specialNotesManagement',
+    component: SpecialNotesManagementComponent
   },
 ];
 

@@ -1,0 +1,52 @@
+<section class="width-100 height-100 d-flex align-items-center justify-content-center bg-white">
+  <div class="content radius-8 overflow-hidden d-flex align-items-center">
+    <div class="login-content">
+      <!-- <h3 class="color-black m-0">Log in</h3> -->
+      <h4 class="color-orange m-0">Hello There,</h4>
+      <span class="color-orange m-0 d-flex align-items-center justify-content-flex-start gap-10">Set UserName & Password
+        <!-- <p class="color-black m-0">E-Fertile</p> -->
+      </span>
+
+
+      <div class="userInputs mt-10">
+        <h5 class="color-black">UserName</h5>
+        <ion-input placeholder="Enter UserName" class="color-black" [(ngModel)]="userData.UserName"></ion-input>
+        <h5 class="color-black mt-10">Password</h5>
+        <ion-input type="{{viewMode ? 'text' : 'password'}}" placeholder="Enter Password"
+          [(ngModel)]="userData.Password" class="color-black custom-ion-input">
+          <i class="d-flex pointer position-absolute z-index-10"
+            [ngClass]="viewMode && clickedEye==1 ? 'bi bi-eye' : 'bi bi-eye-slash'" (click)="viewPassword(1)"></i>
+        </ion-input>
+
+        <h5 class="color-black mt-10">Confirm Password</h5>
+        <ion-input type="{{viewMode ? 'text' : 'password'}}" placeholder="Enter Confirm Password"
+          [(ngModel)]="userData.ConfirmPassword" class="color-black custom-ion-input">
+          <i class="d-flex pointer position-absolute z-index-10"
+            [ngClass]="viewMode && clickedEye==2 ? 'bi bi-eye' : 'bi bi-eye-slash'" (click)="viewPassword(2)"></i>
+        </ion-input>
+
+      </div>
+
+      <div class="width-100 d-flex align-items-center justify-content-center mt-20">
+        <button class="login_button color-white d-flex align-items-center justify-content-center"
+          (click)="setCredentials()">Confirm <img src="../../assets/login-arrow.svg" alt=""></button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div
+    class="alertPop width-100 height-100 position-fixed top-0 left-0 z-index-10 bg-overlay d-flex align-items-center justify-content-center"
+    *ngIf="AlertPopup">
+    <div class="card position-relative d-flex align-items-center justify-content-center">
+      <i class="bi bi-x-square position-absolute z-index-10 pointer" (click)="closeAlert()"></i>
+      <div class="card-content">
+        <h1>{{AlertPopupData.message}}</h1>
+        <button (click)="AlertPopupData.click()">{{AlertPopupData.button}}</button>
+      </div>
+    </div>
+  </div>
+
+
+</section>

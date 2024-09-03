@@ -73,11 +73,19 @@ export class TableManagementComponent {
     }
   ];
 
+  createNewTable: any;
+
   ionViewWillEnter() {
     this.app.leftSide = true
     this.app.topHeader = true
     this.app.anotherLeftMenu = true
     this.app.leftSelectedMenu = 5;
+    this.createNewTable = false;
+  }
+
+  newTable() {
+    this.createNewTable = true;
+    console.log(this.createNewTable);
   }
 
 }

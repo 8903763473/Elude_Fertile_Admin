@@ -1,0 +1,181 @@
+section {
+    .content {
+        width: 80% !important;
+        height: 80% !important;
+        box-shadow: 0px 2px 39px 14px #00000005;
+        background-image: url('../../assets/otp-BG.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 40px;
+        justify-content: flex-start;
+
+        .login-content {
+            width: 400px;
+            height: 400px;
+            padding: 20px;
+
+            h3 {
+                font-family: Poppins;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 35px;
+                text-align: left;
+
+            }
+
+            h4 {
+                font-family: IBM Plex Serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 35px;
+                text-align: left;
+            }
+
+            span {
+                font-family: Inter;
+                font-size: 24px;
+                font-weight: 800;
+                line-height: 35px;
+                text-align: left;
+            }
+
+            .userInputs {
+                h5 {
+                    font-family: Poppins;
+                    font-size: 12px;
+                    font-weight: 300;
+                    line-height: 24px;
+                    text-align: left;
+                }
+
+                ion-input {
+                    min-height: 32px !important;
+                    border-radius: 4px;
+                    background: #FFF6F4;
+                    font-family: Poppins;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    text-align: left;
+                    --padding-start: 10px !important;
+                    position: relative;
+
+                    i {
+                        right: 5px;
+                        top: 10px;
+                    }
+                }
+            }
+
+            .login_button {
+                background: #F15350 !important;
+                font-family: Poppins;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 24px;
+                text-align: left;
+                width: 100px;
+                height: 30px;
+                border-radius: 20px;
+                gap: 5px;
+            }
+        }
+    }
+
+    .card {
+        width: 300px;
+        min-height: 200px;
+        padding: 20px;
+        border: 1px solid black;
+        position: relative;
+        background: hsl(243.8, 47.1%, 12%);
+        overflow: hidden;
+        border-radius: 1rem;
+        color: white !important;
+
+        i {
+            right: 12px;
+            top: 12px;
+        }
+    }
+
+    .card::before {
+        content: "";
+        width: 1000px;
+        height: 1000px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        animation: rotating 2s infinite cubic-bezier(0.45, 0, 0.55, 1);
+        transform-origin: center;
+        background: conic-gradient(rgba(255, 255, 255, .6), transparent, transparent, rgba(255, 255, 255, .3), transparent, transparent, rgba(255, 255, 255, .6))
+    }
+
+    .card::after {
+        content: "";
+        width: calc(100% - 8px);
+        height: calc(100% - 8px);
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        background: inherit;
+        border-radius: .8rem;
+        z-index: 1;
+    }
+
+    .card-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+    }
+
+    @keyframes rotating {
+        from {
+            transform: translate(-500px, -500px) rotate(0deg);
+        }
+
+        to {
+            transform: translate(-500px, -500px) rotate(360deg);
+        }
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        border-radius: 4px;
+        padding: 8px 16px;
+        color: black;
+        background-image: linear-gradient(to right, #F15350, #f15350);
+        margin: 1rem 0 0 0;
+        cursor: pointer;
+    }
+
+}
+
+
+
+@media screen and (max-width:750px) {
+    .content {
+        justify-content: center !important;
+        padding: 20px !important;
+    }
+
+    .login-content {
+        width: 100% !important;
+
+        span {
+            font-size: 20px !important;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .login-content {
+        span {
+            font-size: 15px !important;
+        }
+    }
+}

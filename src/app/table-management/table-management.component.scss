@@ -25,8 +25,9 @@ section {
                     .form-actions {
 
                         button {
-                            min-width: 100px;
-                            padding: 10px 15px;
+                            min-width: 65px;
+                            padding: 4px;
+                            font-size: 11px;
                             border: none;
                             border-radius: 4px;
                             cursor: pointer;
@@ -37,7 +38,7 @@ section {
                             color: black;
 
                             img {
-                                width: 20px !important;
+                                width: 13px !important;
                             }
 
                             &.new-btn {
@@ -56,7 +57,7 @@ section {
                         ion-label {
                             width: 35%;
                             font-family: Barlow;
-                            font-size: 14px;
+                            font-size: 11px;
                             font-weight: 500;
                             line-height: 28px;
                             text-align: left;
@@ -64,14 +65,20 @@ section {
 
                         ion-input {
                             width: 65%;
-                            min-height: 30px;
+                            min-height: 25px;
+                            font-family: Quicksand;
+                            font-size: 13px;
+                            font-weight: 600;
+                            line-height: 26.25px;
+                            text-align: start;
+                            --padding-start: 10px;
                         }
                     }
                 }
 
                 .deActivate {
                     button {
-                        padding: 8px 10px;
+                        padding: 5px 7px;
                         font-family: Barlow;
                         font-size: 14px;
                         font-weight: 500;
@@ -95,7 +102,7 @@ section {
                         font-family: Inter;
                         font-size: 10px;
                         font-weight: 600;
-                        line-height: 19.36px;
+                        line-height: 12px;
 
                         padding: 5px;
                         border: 1px solid #ccc;
@@ -124,6 +131,45 @@ section {
                         display: inline-block;
                     }
                 }
+
+                .newTable {
+                    height: 300px;
+
+                    .table-in {
+
+                        .table-in-top,
+                        .table-in-bottom {
+                            height: 180px !important;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            flex-direction: column;
+
+                            svg {
+                                width: 30px !important;
+                                height: 30px !important;
+                            }
+                        }
+
+                        .table-in-center {
+                            .table-in-center-in {
+                                width: 100px;
+                                height: 100px;
+                                border: 1px solid grey;
+                                border-radius: 50%;
+
+                                span {
+                                    font-family: Quicksand;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    line-height: 31.25px;
+                                    text-align: center;
+
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -141,4 +187,16 @@ section {
 
 .bg-dark-table {
     background-color: #474747 !important;
+}
+
+.width-200px {
+    width: 200px !important;
+}
+
+.min-width-200px {
+    min-width: 200px !important;
+}
+
+.height-200px {
+    height: 200px !important;
 }
