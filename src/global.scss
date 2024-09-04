@@ -420,6 +420,14 @@ input[type='number'] {
     font-size: 10px !important;
 }
 
+.font-15 {
+    font-size: 15px !important;
+}
+
+.font-20 {
+    font-size: 20px !important;
+}
+
 .p-5 {
     padding: 5px !important;
 }
@@ -428,16 +436,8 @@ input[type='number'] {
     margin: 0 !important;
 }
 
-.border-orange {
-    border: 1px solid #F15350;
-}
-
 .font-12 {
     font-size: 12px !important;
-}
-
-.bg-dark {
-    background: #4A575D !important;
 }
 
 .flex-wrap {
@@ -583,6 +583,10 @@ body {
     top: 10px !important;
 }
 
+.left-20 {
+    left: 20px !important;
+}
+
 .right-10 {
     right: 10px !important;
 }
@@ -593,4 +597,16 @@ body {
 
 .z-index-minus-1 {
     z-index: -1 !important;
+}
+
+.width-90 {
+    width: 90% !important;
+}
+
+.mt-25 {
+    margin-top: 25px !important;
+}
+
+.p-6 {
+    padding: 6px !important;
 }

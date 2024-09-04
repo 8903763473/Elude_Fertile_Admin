@@ -14,8 +14,10 @@ export class ApiService {
     return this.http.post(this.baseUrl + '/login', data)
   }
 
-  setCredential(data: any) {
-    return this.http.post(this.baseUrl + '/sendEmail', data)
+  setPassword(data: any) {
+    return this.http.put(this.baseUrl + '/updatePassword', data)
   }
+
+
 
 }

@@ -49,4 +49,10 @@ export class AppComponent {
     this.menu.close();
   }
 
+  darkMode: boolean = false;
+
+  toggleDarkMode() {
+    document.body.classList.toggle('dark', this.darkMode);
+  }
+
 }

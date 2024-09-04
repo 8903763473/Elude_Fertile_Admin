@@ -10,16 +10,16 @@
 
       <div class="userInputs mt-10">
         <h5 class="color-black">UserName</h5>
-        <ion-input placeholder="Enter UserName" class="color-black" [(ngModel)]="userData.UserName"></ion-input>
+        <ion-input placeholder="Enter UserName" class="color-black" [(ngModel)]="userData.userName"></ion-input>
         <h5 class="color-black mt-10">Password</h5>
-        <ion-input type="{{viewMode ? 'text' : 'password'}}" placeholder="Enter Password"
-          [(ngModel)]="userData.Password" class="color-black custom-ion-input">
+        <ion-input type="{{viewMode && clickedEye==1 ? 'text' : 'password'}}" placeholder="Enter Password"
+          [(ngModel)]="userData.password" class="color-black custom-ion-input">
           <i class="d-flex pointer position-absolute z-index-10"
             [ngClass]="viewMode && clickedEye==1 ? 'bi bi-eye' : 'bi bi-eye-slash'" (click)="viewPassword(1)"></i>
         </ion-input>
 
         <h5 class="color-black mt-10">Confirm Password</h5>
-        <ion-input type="{{viewMode ? 'text' : 'password'}}" placeholder="Enter Confirm Password"
+        <ion-input type="{{viewMode && clickedEye==2 ? 'text' : 'password'}}" placeholder="Enter Confirm Password"
           [(ngModel)]="userData.ConfirmPassword" class="color-black custom-ion-input">
           <i class="d-flex pointer position-absolute z-index-10"
             [ngClass]="viewMode && clickedEye==2 ? 'bi bi-eye' : 'bi bi-eye-slash'" (click)="viewPassword(2)"></i>
@@ -29,7 +29,7 @@
 
       <div class="width-100 d-flex align-items-center justify-content-center mt-20">
         <button class="login_button color-white d-flex align-items-center justify-content-center"
-          (click)="setCredentials()">Confirm <img src="../../assets/login-arrow.svg" alt=""></button>
+          (click)="setPassword()">Confirm <img src="../../assets/login-arrow.svg" alt=""></button>
       </div>
 
     </div>

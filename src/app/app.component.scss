@@ -40,6 +40,9 @@
     }
 }
 
+ion-title {
+    height: 45px !important;
+}
 
 // *****************************ADDITIONAL STYLE*******************************
 
@@ -121,5 +124,79 @@
 
     .item-label {
         margin-left: 8px;
+    }
+}
+
+
+
+
+.custom-toggle {
+    position: relative;
+    width: 150px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.custom-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 40px;
+    height: 100%;
+    background-color: #f44336;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.toggle-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5px;
+    left: 2px;
+    transition: left 0.3s;
+}
+
+.circle {
+    top: 2px !important;
+}
+
+.toggle-icon {
+    font-size: 10px;
+    color: #f44336;
+    transition: color 0.3s;
+}
+
+input[type="checkbox"]:checked+.toggle-label {
+    background-color: #FFF;
+    border: 1px solid #F15350;
+}
+
+input[type="checkbox"]:checked+.toggle-label .toggle-circle {
+    left: calc(100% - 18px);
+}
+
+input[type="checkbox"]:checked+.toggle-label .toggle-icon {
+    color: #f44336;
+}
+
+.moonIcon {
+    border-radius: 50%;
+    background: #f44336;
+
+    ion-icon {
+        color: white !important;
     }
 }

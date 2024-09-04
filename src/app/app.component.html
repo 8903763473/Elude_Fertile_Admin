@@ -1,14 +1,18 @@
 <ion-app>
   <!-- Left Sidebar Menu -->
-  <div class="leftSideMenu width-50px min-height-100vh bg-orange d-flex align-items-center justify-content-center flex-direction-column gap-20" *ngIf="leftSide">
+  <div
+    class="leftSideMenu width-50px min-height-100vh bg-orange d-flex align-items-center justify-content-center flex-direction-column gap-20"
+    *ngIf="leftSide">
     <div class="logo mt-10">
       <img src="../assets/menu/Logo.svg" alt="Logo">
     </div>
     <div class="openAnotherMenu pointer" (click)="OpenAnotherLeftMenu()">
       <i class="bi bi-arrow-right-square-fill color-white"></i>
     </div>
-    <div class="Menus width-100 height-100 d-flex align-items-center justify-content-flex-start flex-direction-column gap-20">
-      <div class="width-100 height-40px d-flex align-items-center justify-content-center" *ngFor="let item of menuItems">
+    <div
+      class="Menus width-100 height-100 d-flex align-items-center justify-content-flex-start flex-direction-column gap-20">
+      <div class="width-100 height-40px d-flex align-items-center justify-content-center"
+        *ngFor="let item of menuItems">
         <img [id]="'menu-' + item.id" [src]="item.src" [alt]="item.alt" class="pointer menu">
       </div>
     </div>
@@ -16,72 +20,132 @@
 
   <!-- Main Content -->
   <ion-router-outlet class="bg-white" id="mainMenu" (click)="menu.close()" [class.isleftSideOpen]="leftSide==true">
-    <ion-header [translucent]="true" class="box-shaddow-none height-50px z-index-1000 overflow-hidden" *ngIf="topHeader">
+    <ion-header [translucent]="true" class="box-shaddow-none height-50px z-index-1000 overflow-hidden"
+      *ngIf="topHeader">
       <ion-toolbar class="--bg-white position-relative">
-        <ion-title>
+        <ion-title class="position-relative">
           <img src="../assets/menu/LOGO ELUDE.svg" alt="Logo Elude" class="width-100px webLogo">
           <img src="../assets/menu/LOGO ELUDE_white.svg" alt="Logo Elude" class="width-100px mobileLogo">
-          <i class="bi bi-list color-white position-absolute right-20 font-23 pointer menuIcon" (click)="menu.open('first');menus()"></i>
+          <i class="bi bi-list color-white position-absolute right-20 font-23 pointer menuIcon"
+            (click)="menu.open('first');menus()"></i>
+
+
+          <div class="custom-toggle position-absolute right-10 top-10">
+            <input type="checkbox" id="toggle" [(ngModel)]="darkMode" (change)="toggleDarkMode()" />
+            <label for="toggle" class="toggle-label">
+              <span class="toggle-circle" [class.moonIcon]="darkMode" [class.circle]="!darkMode">
+                <ion-icon [name]="darkMode ? 'moon' : 'sunny'" class="toggle-icon"></ion-icon>
+              </span>
+            </label>
+
+            <ion-label class="color-orange font-10 d-flex align-items-center justify-content-center gap-5">Settings
+              <ion-icon name="Settings" class="color-orange pointer font-20"></ion-icon></ion-label>
+          </div>
+
+
+
+
         </ion-title>
       </ion-toolbar>
     </ion-header>
 
-    <div class="anotherLeftMenu width-200px min-height-100vh height-100 bg-white border-orange ml-5 radius-3 position-relative z-index-10" *ngIf="anotherLeftMenu" [class.isanotherLeftMenuOpened]="isOpenedAnotherMenu">
-<div class="width-100 height-100 position-fixed z-index-minus-1" *ngIf="isOpenedAnotherMenu" (click)="isOpenedAnotherMenu=false"></div>
-      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative radius-3" [class.leftSelectedBg]="leftSelectedMenu==1" (click)="selectLeftMenu('home',1)">
+    <div
+      class="anotherLeftMenu width-200px min-height-100vh height-100 bg-white border-orange ml-5 radius-3 position-relative z-index-10"
+      *ngIf="anotherLeftMenu" [class.isanotherLeftMenuOpened]="isOpenedAnotherMenu">
+      <div class="width-100 height-100 position-fixed z-index-minus-1" *ngIf="isOpenedAnotherMenu"
+        (click)="isOpenedAnotherMenu=false"></div>
+      <div
+        class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative radius-3"
+        [class.leftSelectedBg]="leftSelectedMenu==1" (click)="selectLeftMenu('home',1)">
         <i class="bi bi-shop-window" [ngClass]="leftSelectedMenu == 1 ? 'color-orange' : 'color-grey'"></i>
         <div class="menuName">
-<span>Your Restaurant</span>
-<p class="m-0">Darl and Light mode, Font size</p>
+          <span>Your Restaurant</span>
+          <p class="m-0">Darl and Light mode, Font size</p>
         </div>
         <img src="../assets/admin-menu-bar.svg" alt="" class="position-absolute right-0" *ngIf="leftSelectedMenu==1">
       </div>
 
-      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative" [class.leftSelectedBg]="leftSelectedMenu==2" (click)="selectLeftMenu('ProductManagement',2)">
+      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative"
+        [class.leftSelectedBg]="leftSelectedMenu==2" (click)="selectLeftMenu('ProductManagement',2)">
         <i class="bi bi-patch-check" [ngClass]="leftSelectedMenu == 2 ? 'color-orange' : 'color-grey'"></i>
         <div class="menuName">
-<span>Products Management</span>
-<p class="m-0">Manage your product, pricing, etc</p>
+          <span>Products Management</span>
+          <p class="m-0">Manage your product, pricing, etc</p>
         </div>
         <img src="../assets/admin-menu-bar.svg" alt="" class="position-absolute right-0" *ngIf="leftSelectedMenu==2">
       </div>
 
-      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative" [class.leftSelectedBg]="leftSelectedMenu==3" (click)="selectLeftMenu('userManagement',3)">
+      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative"
+        [class.leftSelectedBg]="leftSelectedMenu==3" (click)="selectLeftMenu('userManagement',3)">
         <i class="bi bi-bell" [ngClass]="leftSelectedMenu == 3 ? 'color-orange' : 'color-grey'"></i>
         <div class="menuName">
-<span>Notifications</span>
-<p class="m-0">Customize your notifications</p>
+          <span>Notifications</span>
+          <p class="m-0">Customize your notifications</p>
         </div>
         <img src="../assets/admin-menu-bar.svg" alt="" class="position-absolute right-0" *ngIf="leftSelectedMenu==3">
       </div>
 
-      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative" [class.leftSelectedBg]="leftSelectedMenu==4" (click)="selectLeftMenu('userManagement',4)">
+      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative"
+        [class.leftSelectedBg]="leftSelectedMenu==4" (click)="selectLeftMenu('userManagement',4)">
         <i class="bi bi-lock" [ngClass]="leftSelectedMenu == 4 ? 'color-orange' : 'color-grey'"></i>
         <div class="menuName">
-<span>Security</span>
-<p class="m-0">Configure Password, PIN, etc</p>
+          <span>Security</span>
+          <p class="m-0">Configure Password, PIN, etc</p>
         </div>
         <img src="../assets/admin-menu-bar.svg" alt="" class="position-absolute right-0" *ngIf="leftSelectedMenu==4">
       </div>
 
-      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative" [class.leftSelectedBg]="leftSelectedMenu==5" (click)="selectLeftMenu('tableManagement',5)">
+      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative"
+        [class.leftSelectedBg]="leftSelectedMenu==5" (click)="selectLeftMenu('tableManagement',5)">
         <i class="bi bi-table" [ngClass]="leftSelectedMenu == 5 ? 'color-orange' : 'color-grey'"></i>
         <div class="menuName">
-<span>Create Table</span>
-<p class="m-0">Create Dining Tables</p>
+          <span>Create Table</span>
+          <p class="m-0">Create Dining Tables</p>
         </div>
         <img src="../assets/admin-menu-bar.svg" alt="" class="position-absolute right-0" *ngIf="leftSelectedMenu==5">
       </div>
 
 
-      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative" [class.leftSelectedBg]="leftSelectedMenu==6" (click)="selectLeftMenu('userManagement',6)">
+      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative"
+        [class.leftSelectedBg]="leftSelectedMenu==6" (click)="selectLeftMenu('userManagement',6)">
         <i class="bi bi-people" [ngClass]="leftSelectedMenu == 6 ? 'color-orange' : 'color-grey'"></i>
         <div class="menuName">
-<span>User Management</span>
-<p class="m-0">Manage users</p>
+          <span>User Management</span>
+          <p class="m-0">Manage users</p>
         </div>
         <img src="../assets/admin-menu-bar.svg" alt="" class="position-absolute right-0" *ngIf="leftSelectedMenu==6">
       </div>
+
+      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative"
+        [class.leftSelectedBg]="leftSelectedMenu==7" (click)="selectLeftMenu('customerRegistration',7)">
+        <i class="bi bi-journal-text" [ngClass]="leftSelectedMenu == 7 ? 'color-orange' : 'color-grey'"></i>
+        <div class="menuName">
+          <span>Customer Registration</span>
+          <p class="m-0">Entry User Details</p>
+        </div>
+        <img src="../assets/admin-menu-bar.svg" alt="" class="position-absolute right-0" *ngIf="leftSelectedMenu==7">
+      </div>
+
+      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative"
+        [class.leftSelectedBg]="leftSelectedMenu==8" (click)="selectLeftMenu('customerRegistration',8)">
+        <i class="bi bi-receipt" [ngClass]="leftSelectedMenu == 8 ? 'color-orange' : 'color-grey'"></i>
+        <div class="menuName">
+          <span>GST Management</span>
+          <p class="m-0">Goods Service Tax</p>
+        </div>
+        <img src="../assets/admin-menu-bar.svg" alt="" class="position-absolute right-0" *ngIf="leftSelectedMenu==8">
+      </div>
+
+      <div class="anotherLeftMenu-In d-flex align-items-center justify-content-flex-start gap-10 position-relative"
+        [class.leftSelectedBg]="leftSelectedMenu==9" (click)="selectLeftMenu('ProductEntryManagement',9)">
+        <i class="bi bi-receipt" [ngClass]="leftSelectedMenu == 9 ? 'color-orange' : 'color-grey'"></i>
+        <div class="menuName">
+          <span>Product Entry</span>
+          <p class="m-0">New Products</p>
+        </div>
+        <img src="../assets/admin-menu-bar.svg" alt="" class="position-absolute right-0" *ngIf="leftSelectedMenu==9">
+      </div>
+
 
     </div>
   </ion-router-outlet>
@@ -106,14 +170,15 @@
         </div>
       </ion-item>
 
-      <ion-item class="options --bg-white width-100 pointer" (click)="selectedMenu('home', 1)" *ngFor="let item of menuItems">
+      <ion-item class="options --bg-white width-100 pointer" (click)="selectedMenu('home', 1)"
+        *ngFor="let item of menuItems">
         <div class="item-content">
           <i class="bi bi-house color-black"></i>
           <span class="item-label color-black">{{item.alt}}</span>
         </div>
       </ion-item>
 
-      
+
     </ion-list>
   </ion-content>
 </ion-menu>

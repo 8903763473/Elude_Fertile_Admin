@@ -17,7 +17,9 @@ export class OTPComponent {
   constructor(public api: ApiService) { }
 
   ionViewWillEnter() {
-    this.userData = {}
+    this.userData = {
+      admin_id: '66d6aa814ac6975d4cbbc76f'
+    }
   }
 
   viewPassword(id: any) {
@@ -25,13 +27,13 @@ export class OTPComponent {
     this.viewMode = !this.viewMode;
   }
 
-  setCredentials() {
-    if (!this.userData.UserName || !this.userData.Password || !this.userData.ConfirmPassword) {
+  setPassword() {
+    if (!this.userData.userName || !this.userData.password || !this.userData.ConfirmPassword) {
       this.showAlert('Fields are Missing', 'Try again', this.tryAgain);
-    } else if (this.userData.Password !== this.userData.ConfirmPassword) {
+    } else if (this.userData.password !== this.userData.ConfirmPassword) {
       this.showAlert('Password Mismatch', 'Try again', this.tryAgain);
     } else {
-      this.api.setCredential(this.userData).subscribe({
+      this.api.setPassword(this.userData).subscribe({
         next: (res => {
           console.log(res);
           this.showAlert('Successful', 'Done', this.tryAgain);

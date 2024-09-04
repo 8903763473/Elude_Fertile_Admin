@@ -8,6 +8,9 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { SpecialNotesManagementComponent } from './special-notes-management/special-notes-management.component';
 import { LoginComponent } from './login/login.component';
 import { OTPComponent } from './otp/otp.component';
+import { CustomerRegistrationComponent } from './customer-registration/customer-registration.component';
+import { GSTManagementComponent } from './gst-management/gst-management.component';
+import { ProductEntryManagementComponent } from './product-entry-management/product-entry-management.component';
 
 const routes: Routes = [
   {
@@ -50,6 +53,18 @@ const routes: Routes = [
   {
     path: 'admin/specialNotesManagement',
     component: SpecialNotesManagementComponent
+  },
+  {
+    path: 'admin/customerRegistration',
+    component: CustomerRegistrationComponent
+  },
+  {
+    path: 'admin/GST-Management',
+    component: GSTManagementComponent
+  },
+  {
+    path: 'admin/ProductEntryManagement',
+    component: ProductEntryManagementComponent
   },
 ];
 

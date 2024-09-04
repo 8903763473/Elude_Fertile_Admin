@@ -17,9 +17,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { OTPComponent } from './otp/otp.component';
+import { CustomerRegistrationComponent } from './customer-registration/customer-registration.component';
+import { GSTManagementComponent } from './gst-management/gst-management.component';
+import { ProductEntryManagementComponent } from './product-entry-management/product-entry-management.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, OTPComponent, ProductManagementComponent, DishManagementComponent, UserManagementComponent, TableManagementComponent, OrderHistoryComponent, SpecialNotesManagementComponent],
+  declarations: [AppComponent, LoginComponent, OTPComponent, ProductManagementComponent, DishManagementComponent, UserManagementComponent, TableManagementComponent, OrderHistoryComponent, SpecialNotesManagementComponent, CustomerRegistrationComponent, GSTManagementComponent, ProductEntryManagementComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, FormsModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, HttpClient],
   bootstrap: [AppComponent],
