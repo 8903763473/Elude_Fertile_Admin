@@ -1,0 +1,69 @@
+.dark {
+    .bg-dark {
+        background: #4A575D !important;
+    }
+    
+    .light-orange {
+        background: #FFCDCC !important;
+    }
+    
+    .bg-overlay {
+        background-color: #00000045 !important;
+    }
+    
+    .bg-grey {
+        background-color: grey !important;
+    }
+    
+    .border-red {
+        border: 1px solid red !important;
+    }
+    
+    .border-lightgrey {
+        border: 1px solid #e0e0e0 !important;
+    }
+    
+    .color-lightgrey {
+        color: #d0d0d0 !important;
+    }
+    
+    .color-grey {
+        color: grey !important;
+    }
+    
+    .color-red {
+        color: red !important;
+    }
+    
+    .border-orange {
+        border: 0.5px solid #F15350 !important;
+    }
+    
+    .border-bottom-orange {
+        border-bottom: 0.5px solid #F15350 !important;
+    }
+    
+    .--bg-white {
+        --background: white !important;
+    }
+    
+    .color-white {
+        color: white !important;
+    }
+    
+    .color-black {
+        color: black !important;
+    }
+    
+    .color-orange {
+        color: #F15350 !important;
+    }
+    
+    .bg-white {
+        background-color: white !important;
+    }
+    
+    .bg-orange {
+        background: #F15350 !important;
+    }
+}

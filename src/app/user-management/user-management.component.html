@@ -7,72 +7,79 @@
         <button><i class="bi bi-search color-black"></i></button>
       </div>
     </div>
-  
 
-  <div class="userInputData width-100 height-auto d-flex align-items-center justify-content-center flex-direction-column gap-20">
-    <div class="form-actions d-flex align-items-center justify-content-center flex-direction-column gap-20">
-      <div class="width-100 d-flex align-items-center justify-content-center gap-20">
-        <button class="new-btn"><img src="../../assets/Dish/new.svg" alt=""> New</button>
-      <button class="save-btn bg-white border-lightgrey"><img src="../../assets/Dish/save.svg" alt="">Save</button>
-      <button class="update-btn bg-white border-lightgrey"><img src="../../assets/Dish/update.svg" alt="">Update</button>
-    <button class="delete-btn bg-white border-lightgrey"><img src="../../assets/Dish/delete.svg" alt="">Delete</button>
-      </div>
-    </div>
-    
-    <form class="width-100 item-details-form">
 
-      <div class="inputSection d-flex align-items-center justify-content-flex-start flex-direction-column">
-        <div class="form-group width-100 mt-10">
-          <label>Name </label>
-          <input type="text" placeholder="Name" class="bg-white"/>
-        </div>
-    
-        <div class="form-group width-100 mt-10">
-          <label>User Id </label>
-          <input type="text" placeholder="User Id" class="bg-white"/>
-        </div>
-    
-        <div class="form-group width-100 mt-10">
-          <label>User Type </label>
-          <select class="bg-white" placeholder="select" style="color: grey !important">
-            <option>Waiter</option>
-            <option>Chef</option>
-            <option>Cashier</option>
-          </select>
-        </div>
+    <div
+      class="userInputData width-100 height-auto d-flex align-items-center justify-content-center flex-direction-column gap-20">
+      <div class="form-actions d-flex align-items-center justify-content-center flex-direction-column gap-20">
+        <div class="width-100 d-flex align-items-center justify-content-center gap-20">
 
-        <div class="form-group width-100 mt-10">
-          <label>PIN </label>
-          <input type="password" placeholder="PIN" class="bg-white"/>
+          <button class="new bg-white border-lightgrey"><i class="bi bi-file-earmark-plus color-black"></i>&nbsp;
+            New</button>
+          <button class="save bg-white border-lightgrey"><i class="bi bi-floppy"></i>&nbsp; Save</button>
+          <button class="update bg-white border-lightgrey"><i class="bi bi-arrow-up-circle"></i>&nbsp;
+            Update</button>
+          <button class="delete bg-white border-lightgrey"><i class="bi bi-trash3"></i>&nbsp; Delete</button>
+
         </div>
       </div>
 
-      <div class="inputSection d-flex align-items-center justify-content-flex-start flex-direction-column">
-        <div class="form-group width-100 mt-10">
-          <label>Email </label>
-          <input type="text" placeholder="Email" class="bg-white"/>
-        </div>
-    
-        <div class="form-group width-100 mt-10">
-          <label>Contact Number</label>
-          <input type="text" placeholder="+91 xxxxxxxxxx" class="bg-white"/>
+      <form class="width-100 item-details-form">
+
+        <div class="inputSection d-flex align-items-center justify-content-flex-start flex-direction-column">
+          <div class="form-group width-100 mt-10">
+            <label>Name </label>
+            <input type="text" placeholder="Name" class="bg-white" />
+          </div>
+
+          <div class="form-group width-100 mt-10">
+            <label>User Id </label>
+            <input type="text" placeholder="User Id" class="bg-white" />
+          </div>
+
+          <div class="form-group width-100 mt-10">
+            <label>User Type </label>
+            <select class="bg-white" placeholder="select" style="color: grey !important">
+              <option>Waiter</option>
+              <option>Chef</option>
+              <option>Cashier</option>
+            </select>
+          </div>
+
+          <div class="form-group width-100 mt-10">
+            <label>PIN </label>
+            <input type="password" placeholder="PIN" class="bg-white" />
+          </div>
         </div>
 
-        <div class="form-group width-100 mt-10">
-          <label>Date </label>
-          <input type="text" placeholder="DD-MM-YYYY"class="bg-white" value="{{selectedDate | date:'dd-mm-yyyy'}}" readonly (click)="isDatePicker=true"/>
-        </div>
-    
-        <div class="form-group width-100 mt-10">
-          <label>Reg Date</label>
-          <input type="text" placeholder="DD-MM-YYYY"class="bg-white" value="{{selectedDate | date:'dd-mm-yyyy'}}" readonly (click)="isDatePicker=true"/>
-        </div>
-      </div>   
+        <div class="inputSection d-flex align-items-center justify-content-flex-start flex-direction-column">
+          <div class="form-group width-100 mt-10">
+            <label>Email </label>
+            <input type="text" placeholder="Email" class="bg-white" />
+          </div>
 
-    </form>
+          <div class="form-group width-100 mt-10">
+            <label>Contact Number</label>
+            <input type="text" placeholder="+91 xxxxxxxxxx" class="bg-white" />
+          </div>
+
+          <div class="form-group width-100 mt-10">
+            <label>Date </label>
+            <input type="text" placeholder="DD-MM-YYYY" class="bg-white" value="{{selectedDate | date:'dd-mm-yyyy'}}"
+              readonly (click)="isDatePicker=true" />
+          </div>
+
+          <div class="form-group width-100 mt-10">
+            <label>Reg Date</label>
+            <input type="text" placeholder="DD-MM-YYYY" class="bg-white" value="{{selectedDate | date:'dd-mm-yyyy'}}"
+              readonly (click)="isDatePicker=true" />
+          </div>
+        </div>
+
+      </form>
 
     </div>
-  
+
     <div class="ExistUsers width-100 height-auto d-flex align-items-center justify-content-flex-start overflow-X">
       <table class="items-table">
         <thead>
@@ -107,16 +114,18 @@
 
 
 
-  <!-- ******************************************************POPUP***************************************** -->
+    <!-- ******************************************************POPUP***************************************** -->
 
 
-  <div id="datePickPopup" class="DatePick height-100 position-fixed z-index-10 top-0 left-0 d-flex align-items-center justify-content-center bg-overlay" *ngIf="isDatePicker">
-    <div class="width-100 height-100 position-fixed z-index-minus-1" (click)="isDatePicker=false"></div>
-    <div>
+    <div id="datePickPopup"
+      class="DatePick height-100 position-fixed z-index-10 top-0 left-0 d-flex align-items-center justify-content-center bg-overlay"
+      *ngIf="isDatePicker">
+      <div class="width-100 height-100 position-fixed z-index-minus-1" (click)="isDatePicker=false"></div>
+      <div>
         <ion-datetime id="datePicker" (ionChange)="onDateSelected($event)" placeholder="Select Date"></ion-datetime>
+      </div>
     </div>
-</div>  
-<!-- <p id="selectedDate">Selected Date: None</p> -->
+    <!-- <p id="selectedDate">Selected Date: None</p> -->
 
 
 

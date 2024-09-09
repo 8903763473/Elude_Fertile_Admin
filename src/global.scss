@@ -36,6 +36,11 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
 
+// @import url('../src/assets/scss/dark.scss');
+// @import url('../src/assets/scss/light.scss');
+
+
+
 
 ::-webkit-scrollbar {
     width: 0px !important;
@@ -240,36 +245,8 @@ input[type='number'] {
     gap: 20px !important;
 }
 
-.color-white {
-    color: white !important;
-}
-
-.color-black {
-    color: black !important;
-}
-
-.color-orange {
-    color: #F15350 !important;
-}
-
-.bg-white {
-    background-color: white !important;
-}
-
-.bg-orange {
-    background: #F15350 !important;
-}
-
 .border-none {
     border: none !important;
-}
-
-.border-bottom-orange {
-    border-bottom: 0.5px solid #F15350 !important;
-}
-
-.--bg-white {
-    --background: white !important;
 }
 
 .box-shaddow-none {
@@ -312,10 +289,6 @@ input[type='number'] {
     margin-left: 5px !important;
 }
 
-.border-orange {
-    border: 0.5px solid #F15350 !important;
-}
-
 .radius-3 {
     border-radius: 3px !important;
 }
@@ -330,10 +303,6 @@ input[type='number'] {
 
 .overflow-X {
     overflow-x: scroll !important;
-}
-
-.color-red {
-    color: red !important;
 }
 
 .hight-115 {
@@ -380,36 +349,12 @@ input[type='number'] {
     overflow: scroll !important;
 }
 
-.color-grey {
-    color: grey !important;
-}
-
 .radius-50 {
     border-radius: 50% !important;
 }
 
-.bg-grey {
-    background-color: grey !important;
-}
-
-.border-red {
-    border: 1px solid red !important;
-}
-
-.border-lightgrey {
-    border: 1px solid #e0e0e0 !important;
-}
-
-.color-lightgrey {
-    color: #d0d0d0 !important;
-}
-
 .radius-7 {
     border-radius: 7px !important;
-}
-
-.light-orange {
-    background: #FFCDCC !important;
 }
 
 .radius-20 {
@@ -480,10 +425,6 @@ input[type='number'] {
     right: 0 !important;
 }
 
-.bg-overlay {
-    background-color: #00000045 !important;
-}
-
 .p-15 {
     padding: 15px !important;
 }
@@ -516,7 +457,7 @@ input[type='number'] {
     font-size: 20px !important;
 }
 
-.oulline-none {
+.outline-none {
     outline: none !important;
 }
 
@@ -609,4 +550,81 @@ body {
 
 .p-6 {
     padding: 6px !important;
+}
+
+.font-16 {
+    font-size: 16px !important;
+}
+
+
+
+
+// *********************************************COLORS***************************************
+
+.bg-dark {
+    background: #4A575D !important;
+}
+
+.light-orange {
+    background: #FFCDCC !important;
+}
+
+.bg-overlay {
+    background-color: #00000045 !important;
+}
+
+.bg-grey {
+    background-color: grey !important;
+}
+
+.border-red {
+    border: 1px solid red !important;
+}
+
+.border-lightgrey {
+    border: 1px solid #e0e0e0 !important;
+}
+
+.color-lightgrey {
+    color: #d0d0d0 !important;
+}
+
+.color-grey {
+    color: grey !important;
+}
+
+.color-red {
+    color: red !important;
+}
+
+.border-orange {
+    border: 0.5px solid #F15350 !important;
+}
+
+.border-bottom-orange {
+    border-bottom: 0.5px solid #F15350 !important;
+}
+
+.--bg-white {
+    --background: white !important;
+}
+
+.color-white {
+    color: white !important;
+}
+
+.color-black {
+    color: black !important;
+}
+
+.color-orange {
+    color: #F15350 !important;
+}
+
+.bg-white {
+    background-color: white !important;
+}
+
+.bg-orange {
+    background: #F15350 !important;
 }

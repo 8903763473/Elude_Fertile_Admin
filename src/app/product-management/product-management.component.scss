@@ -199,4 +199,20 @@ section {
         width: 80px !important;
         min-width: 80px !important;
     }
+
+    .searchSection {
+        width: 100% !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+
+        .searchSection-In {
+            width: 100% !important;
+        }
+    }
+
+    .menuFood {
+        gap: 15px !important;
+        align-items: center !important;
+        justify-content: space-around !important;
+    }
 }

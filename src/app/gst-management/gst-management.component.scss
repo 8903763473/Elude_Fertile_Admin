@@ -4,8 +4,8 @@ section {
     margin-top: 50px !important;
 
     .container {
-        padding: 20px;
-        max-width: 1200px;
+        padding: 20px 0;
+        max-width: 100%;
         margin: 0 auto;
         font-family: Arial, sans-serif;
 
@@ -110,6 +110,10 @@ section {
                 text-align: left;
             }
 
+            .importWeb {
+                display: block;
+            }
+
             .form-group {
                 display: flex;
                 align-items: center;
@@ -172,9 +176,32 @@ section {
                     text-align: center;
                 }
             }
+
+            .top-title {
+                width: -webkit-fill-available;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                ion-label {
+                    font-family: Barlow;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 21px;
+                    text-align: left;
+                }
+
+                img {
+                    display: none;
+                }
+            }
         }
 
         .form-actions {
+            .btns {
+                flex-direction: column;
+            }
 
             button {
                 min-width: 100px;
@@ -238,4 +265,52 @@ select:focus {
     background-color: red;
     padding: 2px 4px;
     border-radius: 15px;
+}
+
+
+@media screen and (max-width:940px) {
+    .item-details-form {
+        display: flex !important;
+        flex-direction: column !important;
+        background: white !important;
+        border: none !important;
+        padding: 20px 5px !important;
+    }
+
+    .top-title {
+        img {
+            display: block !important;
+            position: absolute;
+            right: 20px;
+            top: 7px;
+        }
+    }
+
+    .importWeb {
+        display: none !important;
+    }
+
+    .form-actions {
+        .btns {
+            flex-direction: row !important;
+        }
+    }
+
+    .inputSection {
+        gap: 10px !important;
+        margin-top: 40px !important;
+    }
+
+    .Table {
+        width: 100% !important;
+        overflow-x: scroll !important;
+
+        .items-table {
+
+            th,
+            td {
+                min-width: 130px !important;
+            }
+        }
+    }
 }

@@ -21,8 +21,9 @@ import { CustomerRegistrationComponent } from './customer-registration/customer-
 import { GSTManagementComponent } from './gst-management/gst-management.component';
 import { ProductEntryManagementComponent } from './product-entry-management/product-entry-management.component';
 
+
 @NgModule({
-  declarations: [AppComponent, LoginComponent, OTPComponent, ProductManagementComponent, DishManagementComponent, UserManagementComponent, TableManagementComponent, OrderHistoryComponent, SpecialNotesManagementComponent, CustomerRegistrationComponent, GSTManagementComponent, ProductEntryManagementComponent],
+  declarations: [AppComponent, LoginComponent, OTPComponent, ProductManagementComponent, DishManagementComponent, UserManagementComponent, TableManagementComponent, OrderHistoryComponent, SpecialNotesManagementComponent, CustomerRegistrationComponent, GSTManagementComponent, ProductEntryManagementComponent, SpecialNotesManagementComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, FormsModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, HttpClient],
   bootstrap: [AppComponent],

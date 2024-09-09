@@ -54,5 +54,8 @@ export class AppComponent {
   toggleDarkMode() {
     document.body.classList.toggle('dark', this.darkMode);
   }
+  Navigate(data: any) {
+    this.router.navigate(['/admin/' + data]);
+  }
 
 }

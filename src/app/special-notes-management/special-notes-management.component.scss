@@ -1,0 +1,134 @@
+section {
+    width: calc(100% - 226px);
+    margin-top: 50px !important;
+    margin-left: 226px;
+
+    .notes-master-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        .notes-master {
+            width: 40%;
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+
+                th,
+                td {
+                    padding: 10px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                    color: black;
+                    font-size: 12px;
+                }
+
+                th {
+                    background-color: #ff5e5e;
+                    color: white;
+                }
+
+                td {
+                    background-color: #f9f9f9;
+                }
+            }
+        }
+
+        .notes-editor {
+            width: 50%;
+            border: 1px solid #ff5e5e;
+            padding: 20px;
+            border-radius: 8px;
+
+            textarea {
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                height: 100px;
+                max-height: 100px;
+                min-height: 100px;
+                padding: 10px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: 1px solid #ddd;
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                button {
+                    padding: 10px;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    border: none;
+                    cursor: pointer;
+
+                    &.new {
+                        background-color: white;
+                        border: 1px solid #ddd;
+                        color: black;
+                    }
+
+                    &.save {
+                        background-color: #28a745;
+                        color: white;
+                    }
+
+                    &.update {
+                        background-color: #ff5e5e;
+                        color: white;
+                    }
+
+                    &.delete {
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.mob {
+    display: none !important;
+}
+
+.web {
+    display: flex !important;
+}
+
+
+@media screen and (max-width:840px) {
+    .notes-master-container {
+        flex-direction: column-reverse !important;
+
+        .notes-editor {
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+
+            .buttons {
+                display: flex;
+            }
+        }
+
+        .notes-master {
+            width: 100% !important;
+            margin-top: 10px !important;
+        }
+    }
+
+    .mob {
+        display: flex !important;
+    }
+
+    .web {
+        display: none !important;
+    }
+}

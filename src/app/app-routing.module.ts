@@ -12,6 +12,7 @@ import { CustomerRegistrationComponent } from './customer-registration/customer-
 import { GSTManagementComponent } from './gst-management/gst-management.component';
 import { ProductEntryManagementComponent } from './product-entry-management/product-entry-management.component';
 
+
 const routes: Routes = [
   {
     path: 'admin/home',
@@ -27,7 +28,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'admin/otp',
+    path: 'admin/setPassword',
     component: OTPComponent
   },
   {
@@ -65,6 +66,10 @@ const routes: Routes = [
   {
     path: 'admin/ProductEntryManagement',
     component: ProductEntryManagementComponent
+  },
+  {
+    path: 'admin/specialNotesManagement',
+    component: SpecialNotesManagementComponent
   },
 ];
 

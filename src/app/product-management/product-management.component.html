@@ -1,62 +1,80 @@
 <section class="Fullpage bg-white overflow min-height-100vh height-100">
-  <div class="menu_items width-100 height-100 min-height-100vh bg-white">
-     <div class="menu_icons width-100 d-flex align-items-center justify-content-flex-end gap-10 p-10">
-        <button (click)="InTable=true">In Table</button> 
-        <span class="width-20px height-20px d-flex align-items-center justify-content-center radius-50 pointer bg-orange"><i class="bi bi-chevron-left color-white font-10"></i></span>
-        <span class="width-20px height-20px d-flex align-items-center justify-content-center radius-50 pointer bg-orange"><i class="bi bi-chevron-right color-white font-10"></i></span>   
-     </div>
-     <div class="menuCategory width-100 height-140px d-flex align-items-center justify-content-flex-start gap-10 bg-white overflow-X">
-        <div class="menuCategory-In addMenu radius-7 p-10 d-flex align-items-center justify-content-center flex-direction-column gap-20 pointer">
-           <i class="bi bi-plus-circle-fill color-orange"></i>
-           <div class="aboutCategory width-100 d-flex align-items-flex-start justify-content-flex-start flex-direction-column gap-10 ">
-              <span class="color-orange">Add New Category</span>
-           </div>
-        </div>
-        <div class="menuCategory-In radius-7 p-10 d-flex align-items-flex-start justify-content-space-between flex-direction-column gap-20 pointer" *ngFor="let item of menuItems;let i = index" [ngClass]="i === 0 ? 'light-orange border-red ' : 'light-white border-lightgrey'">
-        <img src="{{item.img}}" alt="">
-        <div class="aboutCategory width-100 d-flex align-items-flex-start justify-content-flex-start flex-direction-column gap-10 ">
-           <span>{{item.name}}</span>
-           <p>{{item.description}}</p>
-        </div>
-     </div>
-  </div>
-  <div class="foodTitle width-100 height-auto d-flex align-items-center justify-content-space-between gap-10 flex-wrap bg-white">
-     <h4 class="color-black">All Dishes</h4>
-     <div class="searchSection width-auto d-flex align-items-center justify-content-flex-end gap-10">
-        <div class="searchSection-In d-flex align-items-center justify-content-flex-start">
-           <ion-input placeholder="Search Product">
-           </ion-input>
-           <i class="bi bi-search color-black pointer font-10"></i>
-        </div>
-        <div class="searchSection-In d-flex align-items-center justify-content-flex-start">
-           <ion-input placeholder="Short Code">
-           </ion-input>
-           <i class="bi bi-search color-black pointer font-10"></i>
-        </div>
-     </div>
-  </div>
-  <div class="AllMenus height-auto mt-10">
-     <div class="menuFood width-100 height-auto d-flex align-items-center justify-content-flex-start flex-wrap gap-20 bg-white">
-        <div class="menuFood-In addNewDish height-140px p-10 d-flex align-items-center justify-content-center flex-direction-column radius-20 pointer">
-           <i class="bi bi-plus-circle-fill color-orange"></i>
-           <span class="color-orange">Add New Dish</span>
-        </div>
-        <div class="menuFood-In height-140px p-10 d-flex align-items-center justify-content-space-between flex-direction-column radius-20" *ngFor="let item of dummy;let i = index" [ngClass]="i === 0 ? 'light-orange border-red ' : 'light-white border-lightgrey'">
-        <img src="../../assets/Food/Food.png" alt="">
-        <div class="aboutCategory width-100 d-flex align-items-center justify-content-flex-start flex-direction-column gap-10">
-           <span>Super Delicious
-           Chicken</span>
-           <div class="AddFood pointer">
-              <img src="../../assets/Food/Edit-Dish.svg" alt="" class="editDish"> <span>Edit</span>
-           </div>
-        </div>
-     </div>
-  </div>
-  </div>
-  </div>
-  
+   <div class="menu_items width-100 height-100 min-height-100vh bg-white">
+      <div class="menu_icons width-100 d-flex align-items-center justify-content-flex-end gap-10 p-10">
+         <button (click)="InTable=true">In Table</button>
+         <span
+            class="width-20px height-20px d-flex align-items-center justify-content-center radius-50 pointer bg-orange"><i
+               class="bi bi-chevron-left color-white font-10"></i></span>
+         <span
+            class="width-20px height-20px d-flex align-items-center justify-content-center radius-50 pointer bg-orange"><i
+               class="bi bi-chevron-right color-white font-10"></i></span>
+      </div>
+      <div
+         class="menuCategory width-100 height-140px d-flex align-items-center justify-content-flex-start gap-10 bg-white overflow-X">
+         <div
+            class="menuCategory-In addMenu radius-7 p-10 d-flex align-items-center justify-content-center flex-direction-column gap-20 pointer">
+            <i class="bi bi-plus-circle-fill color-orange"></i>
+            <div
+               class="aboutCategory width-100 d-flex align-items-flex-start justify-content-flex-start flex-direction-column gap-10 ">
+               <span class="color-orange">Add New Category</span>
+            </div>
+         </div>
+         <div
+            class="menuCategory-In radius-7 p-10 d-flex align-items-flex-start justify-content-space-between flex-direction-column gap-20 pointer"
+            *ngFor="let item of menuItems;let i = index"
+            [ngClass]="i === 0 ? 'light-orange border-red ' : 'light-white border-lightgrey'">
+            <img src="{{item.img}}" alt="">
+            <div
+               class="aboutCategory width-100 d-flex align-items-flex-start justify-content-flex-start flex-direction-column gap-10 ">
+               <span>{{item.name}}</span>
+               <p>{{item.description}}</p>
+            </div>
+         </div>
+      </div>
+      <div
+         class="foodTitle width-100 height-auto d-flex align-items-center justify-content-space-between gap-10 flex-wrap bg-white">
+         <h4 class="color-black">All Dishes</h4>
+         <div class="searchSection width-auto d-flex align-items-center justify-content-flex-end gap-10">
+            <div class="searchSection-In d-flex align-items-center justify-content-flex-start">
+               <ion-input placeholder="Search Product">
+               </ion-input>
+               <i class="bi bi-search color-black pointer font-10"></i>
+            </div>
+            <div class="searchSection-In d-flex align-items-center justify-content-flex-start">
+               <ion-input placeholder="Short Code">
+               </ion-input>
+               <i class="bi bi-search color-black pointer font-10"></i>
+            </div>
+         </div>
+      </div>
+      <div class="AllMenus height-auto mt-20">
+         <div
+            class="menuFood width-100 height-auto d-flex align-items-center justify-content-flex-start flex-wrap gap-20 bg-white">
+            <div
+               class="menuFood-In addNewDish height-140px p-10 d-flex align-items-center justify-content-center flex-direction-column radius-20 pointer"
+               (click)="app.Navigate('DishManagement')">
+               <i class="bi bi-plus-circle-fill color-orange"></i>
+               <span class="color-orange">Add New Dish</span>
+            </div>
+            <div
+               class="menuFood-In height-140px p-10 d-flex align-items-center justify-content-space-between flex-direction-column radius-20"
+               *ngFor="let item of dummy;let i = index"
+               [ngClass]="i === 0 ? 'light-orange border-red ' : 'light-white border-lightgrey'">
+               <img src="../../assets/Food/Food.png" alt="">
+               <div
+                  class="aboutCategory width-100 d-flex align-items-center justify-content-flex-start flex-direction-column gap-10">
+                  <span>Super Delicious
+                     Chicken</span>
+                  <div class="AddFood pointer">
+                     <img src="../../assets/Food/Edit-Dish.svg" alt="" class="editDish"> <span>Edit</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
- 
+
+
 
 </section>
-
